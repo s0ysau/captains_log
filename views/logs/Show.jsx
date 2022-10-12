@@ -11,7 +11,7 @@ class Show extends React.Component {
 					<a href={`/logs/${_id}/edit`}>{`Edit the ${title}`}</a>
 				</nav>
 				<p>{entry}</p>
-				<p>From the {title} entry, the ship {shipIsBroken ? 'is operation' : 'has sustained damaged'}</p>
+				<p>From the {title} entry, the ship {shipIsBroken ? 'has sustained damaged' : 'is operation' }</p>
 			</>
 		)
 	}

@@ -19,7 +19,7 @@ class Index extends React.Component {
 								Entry: {entry}
 								<br/>
 								{
-									shipIsBroken? 'Ship is operational' : 'Ship has been damaged'
+									shipIsBroken?  'Ship has been damaged' : 'Ship is operational'
 								}
 								<br/>
 								<form method='POST' action={`/logs/${log._id}?_method=DELETE`}>
