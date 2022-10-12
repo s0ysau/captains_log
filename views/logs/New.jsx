@@ -10,7 +10,7 @@ class New extends React.Component {
             </nav>
             <form method='POST' action='/logs'>
                 Title: <input type='text' name='title' placeholder='Title'></input><br/>
-                Entry: <input textarea='text' name='entry' placeholder='Entry'></input><br/>
+                Entry: <textarea name='entry' placeholder='Entry'></textarea><br/>
                 Ship is damaged?: <input type='checkbox' name='shipIsBroken'></input><br/>
                 <input type='submit' value='Submit Entry Log'></input><br/>
             </form>

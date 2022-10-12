@@ -11,7 +11,7 @@ class Edit extends React.Component {
 				</nav>
 				<form method="POST" action={`/logs/${_id}?_method=PUT`}>
 					Title: <input type='text' name='title' defaultValue={title}></input><br/>
-					Entry: <input type='textarea' name='entry' defaultValue={entry}></input><br/>
+					Entry: <textarea name='entry' defaultValue={entry}></textarea><br/>
 					Is the Ship Damaged: <input type='checkbox' name='shipIsBroken' defaultChecked={shipIsBroken}></input><br/>
 					<input type="submit" value="Edit Entry"/>
 				</form>
