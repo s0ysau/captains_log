@@ -12,6 +12,7 @@ class Index extends React.Component {
 						const {title, shipIsBroken, date} = log
 						return (
 							<li key={log._id}>
+								Date: {date? date.toString() : ''}<br/>
 								<a href={`/logs/${log._id}`}>{title}</a> <br/>
 								{
 									shipIsBroken?  'Ship has been damaged' : 'Ship is operational'

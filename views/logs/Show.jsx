@@ -6,10 +6,10 @@ class Show extends React.Component {
 		const {title, entry, shipIsBroken, date, _id, created_at} = this.props.logs
 		return(
 			<Default title={`${title}`} log={this.props.logs}>
-				<p>{entry}</p>
-				<p>From the {title}, the ship {shipIsBroken? 'has sustained damaged' : 'is operation' }</p>
+				<p>Entry: <br/>
+				{entry}</p>
+				<p>The ship {shipIsBroken? 'has sustained damaged' : 'is operation' }</p>
 				<p>Entry Date: {date? date.toString() : ''}</p>
-				<p>Created At: {created_at? created_at.toString() : ''}</p>
 				<form method='POST' action={`/logs/${_id}?_method=DELETE`}>
 					<input type='submit' value={`Delete ${title}`}/>
 				</form>
