@@ -1,18 +1,19 @@
 const React = require('react')
+const Default = require('../layouts/Default.jsx')
 
 class Show extends React.Component {
 	render(){
-		const {title, entry, shipIsBroken, _id} = this.props.logs
+		const {title, entry, shipIsBroken, date, _id, created_at} = this.props.logs
 		return(
-			<>
-				<h1>{title} Page</h1>
-				<nav>
-					<a href='/logs'>Back to the Entry Log Index Page</a><br/>
-					<a href={`/logs/${_id}/edit`}>{`Edit the ${title}`}</a>
-				</nav>
+			<Default title={`${title}`} log={this.props.logs}>
 				<p>{entry}</p>
-				<p>From the {title} entry, the ship {shipIsBroken ? 'has sustained damaged' : 'is operation' }</p>
-			</>
+				<p>From the {title}, the ship {shipIsBroken? 'has sustained damaged' : 'is operation' }</p>
+				<p>Entry Date: {date? date.toString() : ''}</p>
+				<p>Created At: {created_at? created_at.toString() : ''}</p>
+				<form method='POST' action={`/logs/${_id}?_method=DELETE`}>
+					<input type='submit' value={`Delete ${title}`}/>
+				</form>
+			</Default>
 		)
 	}
 }

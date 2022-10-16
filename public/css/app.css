@@ -1,0 +1,12 @@
+@import url('//fonts.googleapis.com/css?family=Crete+Round');
+
+body {
+    background-color: rgb(110, 110, 110);    
+    color: rgb(31, 64, 130);
+    font-family: 'Press Start 2P', monospace;
+}
+
+li {
+    margin: 20px 0 
+}
+
